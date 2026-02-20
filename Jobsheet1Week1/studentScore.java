@@ -34,7 +34,7 @@ public class studentScore {
         if (nilaiAkhir >= 80) {
             System.out.println("A");
         } else if (nilaiAkhir >= 70) {
-            System.out.println("B");
+            System.out.println("B +");
         } else if (nilaiAkhir >= 60) {
             System.out.println("C");
         } else if (nilaiAkhir >= 50) {
@@ -45,9 +45,9 @@ public class studentScore {
         System.out.println("===============================");
         System.out.println("===============================");
         if (nilaiAkhir >= 60) {
-            System.out.println("Selamat, Anda Lulus.");
+            System.out.println("SELAMAT ANDA LULUS.");
         } else {
-            System.out.println("Maaf, Anda Tidak Lulus.");
+            System.out.println("Anda Tidak Lulus.");
         }
 
     }
