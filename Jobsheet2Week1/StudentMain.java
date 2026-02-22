@@ -14,5 +14,9 @@ public class StudentMain {
         mhs1.ubahKelas("SI 2K");
         mhs1.updateIPK(3.60);
         mhs1.tampilkanInformasi();
+
+        // Number 5
+        Mahasiswa3 mhsAtha = new Mahasiswa3("Sebastian", "254107020160", 3.80, "TI 1I");
+        mhsAtha.tampilkanInformasi();
     }
 }
