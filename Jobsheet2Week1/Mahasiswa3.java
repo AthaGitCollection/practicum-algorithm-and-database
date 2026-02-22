@@ -31,10 +31,12 @@ public class Mahasiswa3 {
 
     // Method to update IPK
     void updateIPK(double ipkBaru) {
-        if (ipkBaru >= 0.0 && ipkBaru <= 4.0) {
-            ipk = ipkBaru;
-        }
+    if (ipkBaru >= 0.0 && ipkBaru <= 4.0) {
+        ipk = ipkBaru;
+    } else {
+        System.out.println("GPA is invalid. Must be between 0.0 and 4.0");
     }
+}
 
     // Method to evaluate performance
     String nilaiKinerja() {
