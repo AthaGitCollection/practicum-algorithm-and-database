@@ -9,11 +9,11 @@ public class Mahasiswa3 {
     public Mahasiswa3() {
     }
 
-    public Mahasiswa3(String nama, String nim, String kelas, double ipk) {
-        this.nama = nama;
+    public Mahasiswa3(String nm, String nim, double ipk, String kls) {
+        nama = nm;
         this.nim = nim;
-        this.kelas = kelas;
         this.ipk = ipk;
+        kelas = kls;
     }
 
     // Method to display student information
@@ -31,19 +31,19 @@ public class Mahasiswa3 {
 
     // Method to update IPK
     void updateIPK(double ipkBaru) {
-    if (ipkBaru >= 0.0 && ipkBaru <= 4.0) {
-        ipk = ipkBaru;
-    } else {
-        System.out.println("GPA is invalid. Must be between 0.0 and 4.0");
+        if (ipkBaru >= 0.0 && ipkBaru <= 4.0) {
+            ipk = ipkBaru;
+        } else {
+            System.out.println("GPA is invalid. Must be between 0.0 and 4.0");
+        }
     }
-}
 
     // Method to evaluate performance
     String nilaiKinerja() {
         if (ipk >= 3.5) {
             return "Kinerja sangat baik";
         } else if (ipk >= 3.0) {
-            return "kinerja Baik";
+            return "Kinerja Baik";
         } else if (ipk >= 2.5) {
             return "Kinerja Cukup";
         } else {
@@ -51,4 +51,3 @@ public class Mahasiswa3 {
         }
     }
 }
-
