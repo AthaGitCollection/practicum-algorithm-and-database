@@ -10,7 +10,7 @@ public class StudentNilai {
         this.uas = uas;
     }
 
-    // 🔥 Divide & Conquer - MAX UTS
+    
     static int maxUTS(StudentNilai arr[], int l, int r){
         if(l == r){
             return arr[l].uts;
@@ -21,7 +21,7 @@ public class StudentNilai {
         return Math.max(left, right);
     }
 
-    // 🔥 Divide & Conquer - MIN UTS
+    
     static int minUTS(StudentNilai arr[], int l, int r){
         if(l == r){
             return arr[l].uts;
@@ -32,7 +32,7 @@ public class StudentNilai {
         return Math.min(left, right);
     }
 
-    // 🔥 Brute Force - AVG UAS
+   
     static double avgUAS(StudentNilai arr[]){
         double total = 0;
         for(int i=0; i<arr.length; i++){
