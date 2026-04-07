@@ -1,0 +1,68 @@
+6.2.5 Question !
+
+1. Explain the function of the following program code:
+ 
+2. Show the program code that implements the minimum value search algorithm in selection sort!
+
+3. In insertion sort, explain the purpose of the condition in the loop. 
+ 
+4. In insertion sort, what is the purpose of the given command?
+  
+Answer : 
+
+1. This code swaps two elements if the left value is bigger than the right value.
+It is used in Bubble Sort to arrange data in ascending order.
+
+2.This code finds the smallest value in the array during Selection Sort.
+
+3.This checks if the index is valid and if the value is bigger than the key.
+If true, the value shifts right.
+
+4.This shifts the element one position to the right to make space for the key
+
+6.3.4 Questions!
+
+1.	From the following code snippet, answer question a-c:
+ 
+a.	Why is the condition in the bubbleSort() loop i < idx - 1?
+b.	Why is the condition in the bubbleSort() loop j < idx - i - 1?
+c.	If the number of data in listStudents is 50, how many times will the i loop execute? How many stages of Bubble Sort will be performed?
+2.	Modify the above program to allow dynamic student data input (from the keyboard) consisting of nim, name, studentClass, and gpa.
+
+Answer : 
+A Because Bubble Sort requires n - 1 passes to sort n elements.
+The variable idx represents the number of elements, so the loop runs until idx - 1 to ensure all elements are sorted. The last pass is not needed because the array is already sorted.
+
+B Because after each pass, the largest element is placed at the end of the array.
+So, the inner loop does not need to check the elements that are already sorted.
+•	- i reduces the range since the last i elements are already sorted 
+•	- 1 is used because we compare element j with j + 1 
+
+C The outer loop (i) will execute 49 times
+The number of bubbleshort passes 49 times
+
+2. In word
+
+Question 6.3.9
+
+After the loop finishes, minIndex stores the position of the smallest value in the unsorted portion.
+Then, the algorithm performs one swap to place that minimum value into its correct position at index i
+
+
+*Qusetion 6.3.13
+
+1.         
+
+public void insertionSortDescending() {
+    for (int i = 1; i < idx; i++) {
+        student03 temp = listStudent[i];
+        int j = i - 1;
+
+        while (j >= 0 && listStudent[j].gpa < temp.gpa) {
+            listStudent[j + 1] = listStudent[j];
+            j--;
+        }
+
+        listStudent[j + 1] = temp;
+    }
+}
