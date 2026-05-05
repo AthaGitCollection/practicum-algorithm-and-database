@@ -35,16 +35,21 @@ public class StudentDemo3 {
                     break;
                     
                 case 2:
-                    Student3 graded = stack.pop();
-                    if (graded != null) {
-                        System.out.println("Grading assignment from " + graded.name);
-                        System.out.print("Input grade (0-100): ");
-                        int grade = scan.nextInt();
-                        graded.grading(grade);
-                        System.out.println("Assignment grade of " + graded.name + " is " + grade);
-                    }
-                    break;
-                    
+                Student3 graded = stack.pop();
+            if (graded != null) {
+                System.out.println("Grading assignment from " + graded.name);
+                System.out.print("Input grade (0-100): ");
+
+                int grade = scan.nextInt();
+                     graded.grading(grade);
+
+                System.out.printf("Assignment grade of %s is %d\n", graded.name, grade);
+                
+                String binary = stack.convertToBinary(grade);
+                System.out.printf("Assignment grade in binary is %s\n", binary);
+                 }
+                break;
+
                 case 3:
                     Student3 top = stack.peek();
                     if (top != null) {
@@ -69,4 +74,5 @@ public class StudentDemo3 {
         
         scan.close();
     }
+    
 }

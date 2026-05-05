@@ -55,5 +55,18 @@ void print() {
                                stack[i].nim + "\t" + 
                                stack[i].className);
 }
+String convertToBinary(int grade){
+        ConversionStack stack = new ConversionStack();
+        while (grade > 0) {
+            int mod = grade % 2;
+            stack.push(mod);
+            grade = grade / 2;
+        }
+        String binary = "";
+        while (!stack.isEmpty()) {
+            binary += stack.pop();
+        }
+        return binary;
+    }
 
 }
