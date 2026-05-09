@@ -1,7 +1,5 @@
 package Jobsheet11Week12;
-
-import org.w3c.dom.Node;
-
+import java.util.Scanner;
 public class SingleLinkedList3 {
     Node3 head;
     Node3 tail;
@@ -74,22 +72,28 @@ public void insertAt(int index, Student3 std) {
     }
 public static void main(String[] args) {
         SingleLinkedList3 sll = new SingleLinkedList3();
-        
-    
-Student3 std1 = new Student3("001", "Student 1", "TI-1I", 3.89);
-Student3 std2 = new Student3("002", "Student 2", "TI-1I", 3.45);
-Student3 std3 = new Student3("003", "Student 3", "TI-1I", 3.20);
-Student3 std4 = new Student3("004", "Student 4", "TI-1I", 3.00);
+    Scanner sc = new Scanner(System.in);
 
-sll.print();
-sll.addFirst(std4);
-sll.print();
-sll.addLast(std1);
-sll.print();
-sll.insertAfter(std3, "Student 4");
-sll.insertAt(2, std2);
-sll.print();
+    System.out.print("Input NIM: ");
+    String nim = sc.nextLine();
+
+    System.out.print("Input Name: ");
+    String name = sc.nextLine();
+
+    System.out.print("Input Class: ");
+    String cls = sc.nextLine();
+
+    System.out.print("Input GPA: ");
+    double gpa = sc.nextDouble();
+
+    Student3 std = new Student3(nim, name, cls, gpa);
+
+    sll.addFirst(std);
+
+    sll.print();
 }
 
 }
+
+
 
