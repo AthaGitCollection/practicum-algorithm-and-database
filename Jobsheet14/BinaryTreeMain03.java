@@ -36,5 +36,14 @@ public class BinaryTreeMain03 {
         System.out.println("Student list after deletion:");
         bst.traverseInOrder(bst.root);
 
+        System.out.println("\nMinimum IPK:");
+        bst.getMinIPK().print();
+
+        System.out.println("\nMaximum IPK:");
+        bst.getMaxIPK().print();
+
+        System.out.println("\nStudents with IPK above 3.50:");
+        bst.displayStudentsWithIPKAbove(3.50);
+
     }
 }

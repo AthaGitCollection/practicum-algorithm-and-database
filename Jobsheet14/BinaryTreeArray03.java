@@ -21,5 +21,28 @@ public class BinaryTreeArray03 {
             }
         }
     }
+    void add(Student03 student){
+
+    if(idxLast < data.length - 1){
+        data[++idxLast] = student;
+    }
+    else{
+        System.out.println("Array is full!");
+    }
+}
+void traversePreOrder(int idxStart){
+
+    if(idxStart <= idxLast){
+
+        if(data[idxStart] != null){
+
+            data[idxStart].print();
+
+            traversePreOrder(2 * idxStart + 1);
+
+            traversePreOrder(2 * idxStart + 2);
+        }
+    }
+}
 }
 

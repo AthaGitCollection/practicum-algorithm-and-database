@@ -145,4 +145,68 @@ public BinaryTree03(){
         }
 
     }
+    public void addRekursif(Student03 data){
+    root = addRekursif(root, data);
+}
+
+private Node03 addRekursif(Node03 current, Student03 data){
+
+    if(current == null){
+        return new Node03(data);
+    }
+
+    if(data.ipk < current.data.ipk){
+        current.left = addRekursif(current.left, data);
+    }
+    else if(data.ipk > current.data.ipk){
+        current.right = addRekursif(current.right, data);
+    }
+
+    return current;
+}
+public Student03 getMinIPK(){
+
+    if(isEmpty()){
+        return null;
+    }
+
+    Node03 current = root;
+
+    while(current.left != null){
+        current = current.left;
+    }
+
+    return current.data;
+}
+public Student03 getMaxIPK(){
+
+    if(isEmpty()){
+        return null;
+    }
+
+    Node03 current = root;
+
+    while(current.right != null){
+        current = current.right;
+    }
+
+    return current.data;
+}
+public void displayStudentsWithIPKAbove(double threshold){
+    displayStudentsWithIPKAbove(root, threshold);
+}
+
+private void displayStudentsWithIPKAbove(Node03 node, double threshold){
+
+    if(node != null){
+
+        displayStudentsWithIPKAbove(node.left, threshold);
+
+        if(node.data.ipk > threshold){
+            node.data.print();
+        }
+
+        displayStudentsWithIPKAbove(node.right, threshold);
+    }
+}
 }
